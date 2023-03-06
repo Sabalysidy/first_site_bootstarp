@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agency web site template _ Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.js"></script>
+
+    <script href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: sans-serif;
+    }
+    /*----------------------------- SECTION NAV-BAR ------------------------------------*/
+    .navbar{
+        background-image: linear-gradient(to right, #A517BA, #5F1782);
+        padding: 0 !important;
+    }
+    #nav-bar{
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    .navbar-nav{
+        margin-left: auto;
+    }
+    .navbar-nav li{
+        padding: 0 10px;
+    }
+    .navbar-nav li a{
+        color: #FFF !important;
+        font-weight: 600;
+        float: right;
+        text-align: left;
+    }
+    .navbar-brand img{
+        height: 50px;
+        padding-left: 20px;
+    }
+    .fa-bars{
+      color: #FFF;
+      font-size: 30px !important;
+    }
+    .nav-toggle{
+      outline: none !important;
+    }
+    /*------------------------------ SECTION BANNER ---------------------------*/
+    #banner{
+      background-image: linear-gradient(to right, #A517BA, #5F1782);
+      color: white;
+      padding-top: 5%;
+    }
+    .promo-title{
+      font-size: 40px;
+      font-weight: 600;
+      margin-top: 100px;
+    }
+    .play-btn{
+      width: 45px;
+      margin: 20px;
+    }
+    #banner a{
+      color: #FFF;
+      text-decoration: none;
+    }
+    .bottom-img{
+      width: 100%;
+    }
+    /*------------------------------- SECTION SERVICES -------------------------*/
+    #services{
+      padding: 80px 0;
+    }
+    .service-img{
+      width: 100px;
+      margin-top: 20px;
+    }
+    .services{
+      padding: 20px;
+    }
+    .services h4{
+      padding: 5px;
+      margin-top: 25px;
+      text-transform: uppercase;
+    }
+    .title::before{
+      content: '';
+      background: #7B1798;
+      height: 5px;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      transform: translateY(63px);
+    }
+    .title::after{
+      content: '';
+      background: #7B1798;
+      height: 10px;
+      width: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 60px;
+      display: block;
+      transform: translateY(8px);
+    }
+    .btn-primary{
+      box-shadow: none;
+      padding: 8px 25px;
+      border: none;
+      border-radius: 20px;
+      background-image: linear-gradient(to right, #A517BA, #5F1782);
+    }
+    /*---------------------- ABOUT US SECTION ------------------------*/
+    #about-use{
+      background: #F8F9FA;
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+    .about-title{
+      font-size: 40px;
+      font-weight: 600;
+      margin-top: 8%;
+    }
+    #about-use ul{
+      margin-left: 20px;
+
+    }
+    #about-use ul li{
+      margin: 10px 0;
+    }
+    /*------------------ TESTIMONIALS ----------------------*/
+    #testimonials{
+      margin: 100px 0;
+    }
+    .testmonials{
+      border-left: 4px solid #5F1782;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .testmonials img{
+      height: 60px;
+      width: 60px;
+      margin: 0 10px;
+      border-radius: 50%;
+    }
+    .user-details{
+      display: inline-block;
+      font-size: 12px;
+    }
+    /* -------------------------SOCIAL MEDIA SECTION ----------------------*/
+    #social-media{
+      background: #F8F9FA;
+      padding: 100px 0;
+    }
+    #social-media p{
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    .social-icons img{
+      width: 50px;
+      transition: 0.5s;
+    }
+    .social-icons a:hover img{
+      transform: translateY(-10px);
+    }
+    /*-------------------------- FOOTER SECTION -----------------------*/
+    #footer{
+      background-image: linear-gradient(to right, #A517BA, #5F1782);
+      color: #FFF;
+    }
+    .footer-img{
+      width: 100%;
+    }
+    .footer-box{
+      padding: 20px;
+    }
+    .footer-box img{
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    .footer-box .bx{
+      margin-right: 8px;
+      font-size: 25px;
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      padding-top: 7px;
+      border-radius: 2px;
+      background-image: linear-gradient(to right, #A517BA, #5F1782);
+    }
+    .footer-box .form-control{
+      box-shadow: none !important;
+      border: none;
+      border-radius: 0;
+      margin-top: 25px;
+      max-width: 250px;
+    }
+    .footer-box .btn-primary{
+      box-shadow: none !important;
+      border: none;
+      border-radius: 0;
+      margin-top: 30px;
+      background-image: linear-gradient(to right, #A517BA, #5F1782);
+    }
+    hr{
+      background-color: #FFF;
+    }
+    .copyright{
+      margin-bottom: 0;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+</style>
+<body>
+    <section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="images/images/demo-logo.png" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#top">HOME</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#services">SERVICES</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about-us">ABOUT US</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#footer">CONTACT</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </section>
+    <!-------------------------------- BANNER SECTION ------------------------------------------->
+    <section id="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="promo-title">BEST DIGITAL AGENCY</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus odit quae laboriosam itaque iure sapiente nostrum!
+               Natus blanditiis quos magnam illum corporis, ipsum aspernatur totam delectus voluptatibus iusto, dolor ut?</p>
+               <a href="#"><img src="images/images/play.png" alt="" class="play-btn">Watch Tutorials</a>
+          </div>
+          <div class="col-md-6 text-center">
+            <img src="images/bootstrap.png" alt="" class="image-fluid" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+      <img src="images/images/wave1.png" class="bottom-img" alt="">
+    </section>
+    <!------------------------------- SERVICES-SECTION -------------------------------------->
+    <section id="services">
+      <div class="container text-center">
+        <h2 class="title">WHAT WE DO ?</h2>
+        <div class="row text-center">
+          <div class="col-md-4 services">
+            <img src="images/images/service1.png" class="service-img" alt="">
+            <h4>Growth Marketing</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus odit quae laboriosam itaque iure sapiente nostrum!
+              Natus blanditiis quos magnam illum corporis, ipsum aspernatur totam delectus voluptatibus iusto, dolor ut?</p>
+          </div>
+          <div class="col-md-4 services">
+            <img src="images/images/service2.png" class="service-img" alt="">
+            <h4>Online Branding</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus odit quae laboriosam itaque iure sapiente nostrum!
+              Natus blanditiis quos magnam illum corporis, ipsum aspernatur totam delectus voluptatibus iusto, dolor ut?</p>
+          </div>
+          <div class="col-md-4 services">
+            <img src="images/images/service3.png" class="service-img" alt="">
+            <h4>Animated Ads</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus odit quae laboriosam itaque iure sapiente nostrum!
+              Natus blanditiis quos magnam illum corporis, ipsum aspernatur totam delectus voluptatibus iusto, dolor ut?</p>
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary"> All Services</button>
+      </div>
+    </section>
+    <!--------------------------------- ABOUT SECTION ------------------------------>
+    <section id="about-us">
+      <div class="container">
+        <h1 class="title text-center">WHO CHOOSE US ?</h1>
+        <div class="row">
+          <div class="col-md-6 about-us">
+            <p class="about-title">Why we'er different</p>
+            <ul>
+              <li>Believe in doing business with honesty</li>
+              <li>Believe in doing business with honesty</li>
+              <li>Believe in doing business with honesty</li>
+              <li>Believe in doing business with honesty</li>
+              <li>Believe in doing business with honesty</li>
+              <li>Believe in doing business with honesty</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <img src="images/images/network.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------------------- TESTIMONIALS ---------------------------->
+    <section id="testimonials">
+      <div class="container">
+        <h1 class="title text-center">WHAT CLIENTS SAY ?</h1>
+        <div class="row offset-1">
+          <div class="col-md-5 testmonials">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus odit quae laboriosam itaque iure sapiente nostrum!
+              Natus blanditiis quos magnam illum corporis, ipsum aspernatur totam delectus voluptatibus iusto, dolor ut?</p>
+              <img src="images/Elon-Musk.png" alt="" style="width: 100px;">
+              <p class="user-details"><b>Elon Musk</b><br> Co-founder at Space x</p>
+          </div>
+          <div class="col-md-5 testmonials">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus odit quae laboriosam itaque iure sapiente nostrum!
+              Natus blanditiis quos magnam illum corporis, ipsum aspernatur totam delectus voluptatibus iusto, dolor ut?</p>
+              <img src="images/Steve-Jobs.png" alt="" style="width: 100px;">
+              <p class="user-details"><b>Steve Jobs</b><br> Co-founder at Apple</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------- SOCIAL MEDIA SECTION --------------------------->
+    <section id="social-media">
+      <div class="container text-center">
+        <p>FIND US ON SOCIAL MEDIA</p>
+        <div class="social-icons">
+          <a href=""><img src="images/images/facebook-icon.png" alt=""></a>
+          <a href=""><img src="images/images/instagram-icon.png" alt=""></a>
+          <a href=""><img src="images/images/linkedin-icon.png" alt=""></a>
+          <a href=""><img src="images/images/whatsapp-icon.png" alt=""></a>
+          <a href=""><img src="images/images/twitter-icon.png" alt=""></a>
+          <a href=""><img src="images/images/snapchat-icon.png" alt=""></a>
+        </div>
+      </div>
+    </section>
+    <!------------------------------ FOOTER SECTION ----------------------------->
+    <section id="footer">
+      <img src="images/images/wave2.png" class="footer-img" alt="">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-box">
+            <img src="images/images/demo-logo.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus odit quae laboriosam itaque iure sapiente nostrum!
+              Natus blanditiis quos magnam illum corporis, ipsum aspernatur totam delectus voluptatibus iusto, dolor ut?</p>
+          </div>
+          <div class="col-md-4 footer-box">
+            <p><br>CONTACT US</br></p>
+            <p><i class='bx bx-map'></i> World trade Center, Bangalore</p>
+            <p><i class='bx bx-phone'></i> +1 3843843920</p>
+            <p><i class='bx bx-envelope'></i> dnso@gmail.com</p>
+          </div>
+          <div class="col-md-4 footer-box">
+            <p><br>SUBSCRIBE NEWSLETTER</br></p>
+            <input type="email" class="form-control" placeholder="Your Email">
+            <button type="button" class="btn btn-primary my-3">Subscribe</button>
+          </div>
+        </div>
+        <hr>
+        <p class="copyright">Bootstrap Template</p>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!--------------------------------- Smooth scroll js --------------------------------->
+    <script src="js/smooth-scroll.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+</body>
+</html>
